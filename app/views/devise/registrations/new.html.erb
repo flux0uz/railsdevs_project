@@ -30,6 +30,18 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input" %>
     </div>
 
+    <h3 class="mb-4 text-lg font-bold">Roles</h3>
+
+    <div class="input-group">
+      <%= f.check_box :developer %>
+      <%= f.label :developer, "Use Railsdev as a developer?" %>
+    </div>
+
+    <div class="input-group">
+      <%= f.check_box :employer %>
+      <%= f.label :employer, "Use Railsdev as an employer?" %>
+    </div>
+
     <div class="input-group">
       <%= f.submit "Sign up", class: "btn btn-default" %>
     </div>
@@ -39,7 +51,6 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
-
 <% end %>
 
 <%= render "devise/shared/form_wrap" %>
