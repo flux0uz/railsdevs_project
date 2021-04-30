@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   mount SimpleDiscussion::Engine => "/forum"
   
   devise_for :users
-  root to: 'home#index'
+  root to: 'jobs#index'
   resources :jobs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
