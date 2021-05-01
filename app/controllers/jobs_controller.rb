@@ -68,6 +68,7 @@ class JobsController < ApplicationController
         :company_name,
         :company_website,
         :company_description,
+        :company_logo,
         :description,
         :compensation_range,
         :compensation_type,
@@ -76,7 +77,6 @@ class JobsController < ApplicationController
         :link_to_apply,
         :price,
         :remote,
-        :role_type,
         :title,
         :upsell_type,
         :years_of_experience

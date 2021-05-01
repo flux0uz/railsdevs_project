@@ -52,8 +52,8 @@ class Job < ApplicationRecord
 
   # constants
   COMPENSATION_TYPES = [
-    "contract",
-    "full-time"
+    "Contract",
+    "Full-time"
   ].freeze
   
   COMPENSATION_RANGES = [
