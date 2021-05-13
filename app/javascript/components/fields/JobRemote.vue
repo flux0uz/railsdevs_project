@@ -3,7 +3,7 @@
     <p class="label">Is this a remote role?</p>
     <span class="required"></span>
 
-    <div class="block">
+    <div class="block pt-2">
       <input type="radio" value="Yes" v-model="job.remote" id="isRemote" />
       <label for="isRemote" class="font-normal">Yes</label>
 

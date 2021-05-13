@@ -12,26 +12,34 @@
     <job-title :job="job" class="mb-6"></job-title>
     <apply-link :job="job" class="mb-6"></apply-link>
     <job-description :job="job" class="mb-6"></job-description>
-    <job-experience :job="job" class="mb-6"></job-experience>
-    <compensation-type :job="job" class="mb-6"></compensation-type>
-    <compensation-range :job="job" class="mb-6"></compensation-range>
-    <estimated-hours :job="job" class="mb-6"></estimated-hours>
-    <job-remote :job="job" class="mb-6"></job-remote>
-
-    <h3 class="mb-3 font-black text-3xl">About the Company</h3>
-    <div class="mb-10">
-      <p class="block w-full label">Company logo</p>
-      <file-select :job="job" v-model="job.companyLogo"></file-select>
-      <p class="my-1 text-sm text-gray-500">
-        While not required, we recommend adding a company logo to help your
-        listing stand out.
-      </p>
+    <div class="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-2">
+      <job-experience :job="job" class="lg:col-span-1"></job-experience>
+      <job-remote :job="job" class="lg:col-span-1"></job-remote>
     </div>
-    <company-name :job="job" class="mb-6"></company-name>
-    <company-email :job="job" class="mb-6"></company-email>
-    <company-website :job="job" class="mb-6"></company-website>
+    <div class="grid grid-cols-1 gap-6 mb-10 lg:grid-cols-2">
+      <compensation-type :job="job" class="lg:col-span-1"></compensation-type>
+      <compensation-range :job="job" class="lg:col-span-1"></compensation-range>
+      <estimated-hours :job="job" class="lg:col-span-1"></estimated-hours>
+    </div>
+    <h3 class="mb-3 font-black text-3xl">About the Company</h3>
+    <div class="grid grid-cols-1 gap-6 mb-10 lg:grid-cols-2">
+      <div class="lg:col-span-1">
+        <p class="block w-full label">Company logo</p>
+        <file-select :job="job" v-model="job.companyLogo"></file-select>
+        <p class="my-1 text-sm text-gray-500">
+          While not required, we recommend adding a company logo to help your
+          listing stand out.
+        </p>
+      </div>
+      <company-website :job="job" class="mb-6 lg:col-span-1"></company-website>
+    </div>
+    <div class="grid grid-cols-1 gap-6 mb-10 lg:grid-cols-2">
+      <company-name :job="job" class="lg:col-span-1"></company-name>
+      <company-email :job="job" class="lg:col-span-1"></company-email>
+    </div>
+    <company-description :job="job" class="mb-6"></company-description>
 
-    <a @click.prevent="next" class="btn btn-default">Next</a>
+    <a @click.prevent="next" class="btn btn-red btn-lg">Continue</a>
   </div>
 </template>
 
@@ -47,6 +55,7 @@ import JobRemote from "../fields/JobRemote";
 import CompanyName from "../fields/CompanyName";
 import CompanyEmail from "../fields/CompanyEmail";
 import CompanyWebsite from "../fields/CompanyWebsite";
+import CompanyDescription from "../fields/CompanyDescription";
 import FileSelect from "../fields/FileSelect";
 
 export default {
@@ -63,6 +72,7 @@ export default {
     CompanyEmail,
     FileSelect,
     CompanyWebsite,
+    CompanyDescription,
   },
   props: {
     job: {

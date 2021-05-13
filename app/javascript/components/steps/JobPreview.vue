@@ -2,8 +2,8 @@
   <div>
     <h1 class="font-black text-4xl">Preview</h1>
 
-    <a @click.prevent="prev" class="btn btn-default">Back</a>
-    <a @click.prevent="next" class="btn btn-default">Next</a>
+    <a @click.prevent="prev" class="btn btn-red btn-lg">Back</a>
+    <a @click.prevent="next" class="btn btn-red btn-lg">Continue</a>
   </div>
 </template>
 
